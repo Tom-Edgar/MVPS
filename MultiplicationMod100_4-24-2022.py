@@ -3,12 +3,7 @@ import random
 
 class MultMod100(Scene):
     def construct(self):
-        color5 = "#7DF9FF"
-        color6 = "#FF10F0"
-        color7 = "#FFF01F"
-        color8 = "#39ff14"
-
-        colors = [color8, color5, color6, color7]
+        colors = ["#39ff14", "#7DF9FF", "#FF10F0", "#FFF01F"]
         DiffDiagrams=VGroup()
         n=100
         m=0
@@ -46,9 +41,9 @@ class MultMod100(Scene):
             anis2.append(ShowCreation(x[1]))
         self.play(*anis2, run_time=10)
         self.wait(2)
-        
+
         i = 0
-        thelist = [i for i in range(len(DiffDiagrams))]
+        thelist = [z for z in range(len(DiffDiagrams))]
         for j in thelist:
             self.play(FadeOut(DiffDiagrams[j][1]))
             DiffDiagrams[j][1].set_stroke(color=colors[thelist[i] % 4])
