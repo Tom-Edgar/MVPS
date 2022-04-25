@@ -42,6 +42,7 @@ class MultMod100(Scene):
 
         i = 0
         thelist = [z for z in range(len(DiffDiagrams))]
+        random.shuffle(thelist)
         for j in thelist:
             self.play(FadeOut(DiffDiagrams[j][1]))
             DiffDiagrams[j][1].set_stroke(color=colors[thelist[i] % 4])
