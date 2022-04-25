@@ -6,7 +6,6 @@ class MultMod100(Scene):
         colors = ["#39ff14", "#7DF9FF", "#FF10F0", "#FFF01F"]
         DiffDiagrams=VGroup()
         n=100
-        m=0
         for k in range(2,52):
             tempenv=VGroup()
             Points=[(3*math.cos(2*PI*i/n), 3*math.sin(2*i*PI/n), 0) for i in range(n)]
@@ -19,9 +18,8 @@ class MultMod100(Scene):
                 theLines.add(Line(Points[i],Points[(k*i)%n]).set_stroke(width=1))
             tempenv.add(theLines)
             DiffDiagrams.add(tempenv)
-            m+=1
 
-        DiffDiagrams.scale(.25)
+        DiffDiagrams.scale(.195)
         Rows=[VGroup(*DiffDiagrams[:10])]
         Rows[0].arrange(RIGHT)
         Rows[0].to_edge(UP, buff=.65)
