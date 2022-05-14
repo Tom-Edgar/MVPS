@@ -14,7 +14,7 @@ class Trees618(Scene):
         colors = [WHITE]
         num = 10
         theTrees=[]
-        L=[[.618,2-.01*i] for i in range(175)]
+        L=[[.618,2-.01*i] for i in range(175)] #change .618 to adjust the scale factor r
         for M in L:
             Starter = Line((0, 0, 0), (0, 1, 0)).set_stroke(color=colors[0], width=2)
             rr = M[0]
