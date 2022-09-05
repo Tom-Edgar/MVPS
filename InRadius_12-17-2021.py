@@ -2,44 +2,6 @@ from manimlib import *
 
 class inradius(Scene):
     def construct(self):
-
-
-
-        fontcol=WHITE
-        credittext=Text("MVPs",font_size=17, font="Arial", color=fontcol)
-        credittext.move_to((6.7,-3.75,0))
-        self.add(credittext)
-
-        introfont="Imprint MT Shadow"
-        thesize=60
-        TheTitle=[Text("MICRO", font=introfont, font_size=thesize,color=WHITE),Text("VISUAL", font=introfont, font_size=thesize,color=WHITE),Text("PROOFS", font= introfont, font_size=thesize,color=WHITE)]
- 
-        MVPs=VGroup(*TheTitle)
-        MVPs.arrange(RIGHT)
-        MVPs.move_to((0,.5,0))
-
-        self.play(FadeIn(MVPs))
-
-        MVPTitle=VGroup(Text("M", font= introfont, font_size=thesize, color=WHITE), Text("V", font= introfont, font_size=thesize, color=WHITE),Text("P s", font= introfont, font_size=thesize, color=WHITE))
-        MVPTitle.arrange(RIGHT)
-        MVPTitle.move_to((0,.5,0))
-        self.wait()
-
-        self.play(TheTitle[0].animate.become(MVPTitle[0]),TheTitle[1].animate.become(MVPTitle[1]),TheTitle[2].animate.become(MVPTitle[2]))
-
-        episode=Text("Inradius of a Right Triangle", color="#0072B2", font= introfont)
-
-        episode.move_to((0,-.5,0))
-
-        self.play(Write(episode))
-        self.wait(2)
-
-        self.play(
-            *[FadeOut(mob)for mob in self.mobjects[1:]]
-        )
-        self.wait(1)
-
-
         color1="#009E73"
         colorb="#0072B2"
         colorr="#CC79A7"
