@@ -1,3 +1,4 @@
+# This code was originally written by Tom Edgar. If you use it, please give attribution.
 from manimlib import *
 
 class SineCurve(Scene):
