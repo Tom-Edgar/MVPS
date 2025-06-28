@@ -1,11 +1,5 @@
 from manimlib import *
 
-def abug(thecolor):
-    d=Line((0,0,0),(-.1,.1,0))
-    c=Ellipse(width=2,height=1).scale(.1).set_fill(thecolor, opacity=1).set_stroke(width=.5, color=WHITE)
-    bugg=VGroup(c,d)
-    return bugg
-
 class PursuitCurves(Scene):
     def construct(self):
         n=4
@@ -40,12 +34,5 @@ class PursuitCurves(Scene):
         self.play(Uncreate(VGroup(*thePolys[1:])), run_time=10)
 
         self.wait(2)
-
-        newbug=abug(BLUE)
-        newbug.move_to(OuterPoly.get_vertices()[0])
-        self.play(FadeIn(newbug))
-        def bug1update(mob):
-            mob.move_to(thepaths[0].get_end())
-        newbug.add_updater(bug1update)
 
         self.play(*anis, run_time=10)
